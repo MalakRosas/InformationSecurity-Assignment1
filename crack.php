@@ -7,7 +7,7 @@ $password = isset($_POST['password']) ? $_POST['password'] : "";
 
 function dictionary_attack($password, $dictionary_file, $correct_password) {
   $file = fopen($dictionary_file, "r");
-  while (($word = fgets($file)) !== false) { // reads each password line by line 
+  while (($word = fgets($file)) !== false) { 
       $word = trim($word);
       if ($word === $correct_password) {
           fclose($file);
